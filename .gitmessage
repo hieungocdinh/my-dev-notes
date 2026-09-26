@@ -1,0 +1,22 @@
+# <type>(<topic>): <short description — written like a title, under 72 chars>
+#
+# - Key point 1
+# - Key point 2
+# - Key point 3
+# - Ref: https://
+#
+# ─────────────────────────────────────────────────────────────────────
+# Types:
+#   note    → Adding a new concept or note
+#   update  → Expanding or correcting an existing note
+#   struct  → Restructuring folders / renaming files
+#   fix     → Fixing a factual error or typo
+#   chore   → Updating README, CONTRIBUTING, or meta files
+#
+# Topic examples: javascript, react, docker, networking, system-design
+#
+# Rules:
+#   - Use imperative mood: "understand X" not "understood X"
+#   - Do NOT include a date (Git timestamps it automatically)
+#   - Keep subject line under 72 characters
+# ─────────────────────────────────────────────────────────────────────
