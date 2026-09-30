@@ -1,30 +1,22 @@
-# 📜 Contribution Rules & Conventions
+# 📜 Quy tắc & Quy ước
 
-This file defines **all the rules** for this repository.
-Whether I'm writing myself or asking for help — everything must follow this guide.
+File này định nghĩa **tất cả quy tắc** cho repository này.
+Dù tôi tự viết hay nhờ trợ giúp — mọi thứ phải tuân theo hướng dẫn này.
 
-> **Consistency over frequency.** There's no pressure to write every day.
-> Write whenever you learn something worth keeping — even once a week is valuable.
-
----
-
-## 1. Language
-
-- **All content must be written in English** — this is intentional, to practice technical writing.
-- For **difficult or ambiguous terms**, add a Vietnamese translation on the next line using this format:
-
-  ```markdown
-  ## Closure
-  > 🇻🇳 *Hàm có thể truy cập biến của phạm vi bên ngoài dù phạm vi đó đã kết thúc.*
-
-  A closure is a function that retains access to its lexical scope...
-  ```
-
-- Keep language **simple and clear** — write as if explaining to a junior developer.
+> **Kiên trì hơn tần suất.** Không có áp lực phải viết mỗi ngày.
+> Viết khi nào bạn học được điều gì đáng ghi lại — kể cả một lần mỗi tuần cũng có giá trị.
 
 ---
 
-## 2. Folder Structure
+## 1. Ngôn ngữ
+
+- **Toàn bộ nội dung viết bằng tiếng Việt.**
+- Giữ ngôn ngữ **đơn giản và rõ ràng** — viết như đang giải thích cho junior developer.
+- Tên file, tên folder, và lệnh git giữ nguyên tiếng Anh.
+
+---
+
+## 2. Cấu trúc folder
 
 ```
 my-dev-notes/
@@ -50,164 +42,162 @@ my-dev-notes/
     └── README.md            # Index of all fundamentals categories
 ```
 
-### `topics/` folder
-- For notes about a **specific technology, tool, or framework** (e.g., React, Docker, PostgreSQL).
-- Each technology gets its **own subfolder**.
-- Each subfolder **must** have a `README.md` as an overview/index.
-- Split into multiple `.md` files when a topic grows large (e.g., `hooks.md`, `state-management.md`).
+### Folder `topics/`
+- Dành cho ghi chú về **công nghệ, công cụ, hoặc framework cụ thể** (ví dụ: React, Docker, PostgreSQL).
+- Mỗi công nghệ có **subfolder riêng**.
+- Mỗi subfolder **bắt buộc** có `README.md` làm tổng quan/index.
+- Tách thành nhiều file `.md` khi topic phình to (ví dụ: `hooks.md`, `state-management.md`).
 
-### `fundamentals/` folder
-- For **language-agnostic** Computer Science knowledge that applies regardless of tech stack.
-- Organized into **category subfolders** (algorithms, data-structures, networking, system-design, security...).
-- Each subfolder has its own `README.md` index.
-- Each concept within a subfolder is a **single `.md` file**.
-- Create a new subfolder when a category has (or will have) more than one note.
-
----
-
-## 3. File Naming
-
-| Rule | Example |
-|------|---------|
-| All **lowercase** | ✅ `event-loop.md` ❌ `EventLoop.md` |
-| Use **hyphens** (not underscores or spaces) | ✅ `data-types.md` ❌ `data_types.md` |
-| Name should reflect the **content**, not the date | ✅ `closures.md` ❌ `2026-09-26.md` |
-| Keep names **short but descriptive** | ✅ `async-await.md` ❌ `notes-about-async-await-in-js.md` |
+### Folder `fundamentals/`
+- Dành cho kiến thức **Khoa học Máy tính không phụ thuộc ngôn ngữ**, áp dụng được với mọi tech stack.
+- Tổ chức theo **subfolder danh mục** (algorithms, data-structures, networking, system-design, security...).
+- Mỗi subfolder có `README.md` riêng.
+- Mỗi khái niệm trong subfolder là **một file `.md` duy nhất**.
+- Tạo subfolder mới khi một danh mục có (hoặc sẽ có) nhiều hơn một ghi chú.
 
 ---
 
-## 4. File Content Structure
+## 3. Đặt tên file
 
-Every `.md` note file should follow this template, using a **"Why-first"** approach:
+| Quy tắc | Ví dụ |
+|---------|-------|
+| Tất cả **chữ thường** | ✅ `event-loop.md` ❌ `EventLoop.md` |
+| Dùng **dấu gạch ngang** (không dùng underscore hay khoảng trắng) | ✅ `data-types.md` ❌ `data_types.md` |
+| Tên phản ánh **nội dung**, không phải ngày tháng | ✅ `closures.md` ❌ `2026-09-26.md` |
+| Giữ tên **ngắn nhưng mô tả đủ ý** | ✅ `async-await.md` ❌ `ghi-chu-ve-async-await-trong-js.md` |
+
+---
+
+## 4. Cấu trúc nội dung file
+
+Mỗi file ghi chú `.md` nên theo template này, dùng cách tiếp cận **"Tại sao trước"**:
 
 ```markdown
-# <Topic Title>
-> 🇻🇳 *(Vietnamese translation if needed)*
+# <Tiêu đề>
 
-## Why does it exist?
+## Tại sao nó ra đời?
 <!--
-  Start here. Answer these questions:
-  - What problem existed BEFORE this was created?
-  - What "pain" does it solve for developers?
-  - Why was it invented / what gap did it fill?
-  Think: "Without this, developers had to deal with X..."
+  Bắt đầu từ đây. Trả lời những câu hỏi này:
+  - Vấn đề gì tồn tại TRƯỚC khi nó được tạo ra?
+  - "Nỗi đau" nào nó giải quyết cho developer?
+  - Tại sao nó được phát minh / nó lấp đầy khoảng trống nào?
+  Nghĩ theo hướng: "Nếu không có nó, developer phải chịu đựng X..."
 -->
 
-## What is it?
-<!-- Now define it clearly in your own words, given the context above. -->
+## Nó là gì?
+<!-- Bây giờ định nghĩa rõ ràng bằng lời của bạn, trong bối cảnh trên. -->
 
-## How it works
-<!-- Explain the mechanism, the internals, the mental model. -->
+## Nó hoạt động thế nào?
+<!-- Giải thích cơ chế, nội tại, mô hình tư duy. -->
 
-## Example
-<!-- Code block or real-world analogy that makes it concrete. -->
+## Ví dụ
+<!-- Code block hoặc ví dụ thực tế giúp mọi thứ trở nên cụ thể. -->
 
-## Key Takeaways
-<!-- 3-5 bullet points: the most important things to remember. -->
+## Tóm tắt
+<!-- 3-5 bullet points: những điều quan trọng nhất cần nhớ. -->
 
-## References
-<!-- Links to articles, docs, or videos that helped you understand this. -->
+## Tài liệu tham khảo
+<!-- Links đến bài viết, docs, hoặc video đã giúp bạn hiểu. -->
 ```
 
-> **Note:** Not every section is mandatory. Skip sections that don't apply,
-> but **always include at least `Why does it exist?` and `Example`** — these two anchor the whole note.
+> **Lưu ý:** Không phải mọi phần đều bắt buộc. Bỏ qua phần không áp dụng,
+> nhưng **luôn có ít nhất `Tại sao nó ra đời?` và `Ví dụ`** — hai phần này là nền tảng của ghi chú.
 
 ---
 
-## 5. README.md inside each topic folder
+## 5. README.md trong mỗi folder topic
 
-Every topic folder must have a `README.md` that acts as a **table of contents**:
+Mỗi folder topic phải có `README.md` đóng vai trò **mục lục**:
 
 ```markdown
-# <Technology Name>
+# <Tên công nghệ>
 
-> Brief one-line description of what this technology is.
+> Mô tả một dòng về công nghệ này là gì.
 
-## Notes
+## Danh sách ghi chú
 
-| File | Description |
-|------|-------------|
-| [closures.md](./closures.md) | How closures work and why they matter |
-| [event-loop.md](./event-loop.md) | Understanding JS single-threaded async model |
+| File | Mô tả |
+|------|-------|
+| [closures.md](./closures.md) | Closure hoạt động thế nào và tại sao quan trọng |
+| [event-loop.md](./event-loop.md) | Hiểu mô hình async single-threaded của JS |
 ```
 
-Update this file every time you add a new note to the folder.
+Cập nhật file này mỗi khi bạn thêm ghi chú mới vào folder.
 
 ---
 
-## 6. Commit Message Format
+## 6. Định dạng commit message
 
-Git commit history is the **daily learning log** of this repository.
-A well-written commit = a record of what was learned on that day.
+Lịch sử Git commit là **nhật ký học tập hằng ngày** của repository này.
+Một commit được viết tốt = một bản ghi về những gì đã học ngày hôm đó.
 
-### Format
+### Định dạng
 
 ```
-<type>(<topic>): <short description — written like a title>
+<loại>(<topic>): <mô tả ngắn — viết như tiêu đề>
 
-- Key point 1
-- Key point 2
-- Key point 3
+- Điểm chính 1
+- Điểm chính 2
+- Điểm chính 3
 - Ref: https://link-to-source.com
 ```
 
-### Types
+### Các loại commit
 
-| Type | When to use |
-|------|-------------|
-| `note` | Adding a new note or concept |
-| `update` | Expanding or correcting an existing note |
-| `struct` | Restructuring folders, renaming files |
-| `fix` | Fixing a factual error or typo in a note |
-| `chore` | Updating README, CONTRIBUTING, or other meta files |
+| Loại | Khi nào dùng |
+|------|--------------|
+| `note` | Thêm ghi chú hoặc khái niệm mới |
+| `update` | Mở rộng hoặc sửa ghi chú hiện có |
+| `struct` | Tổ chức lại folder, đổi tên file |
+| `fix` | Sửa lỗi thực tế hoặc lỗi chính tả trong ghi chú |
+| `chore` | Cập nhật README, CONTRIBUTING, hoặc file meta khác |
 
-### Rules for the subject line
-- Use **imperative mood**: `note(react): understand useEffect cleanup` ✅ (not "noted" or "noting")
-- Keep it **under 72 characters**
-- The `<topic>` should match the **folder name** (e.g., `react`, `docker`, `networking`)
-- **Do NOT include a date** in the subject — Git timestamps it automatically
+### Quy tắc cho dòng subject
+- Dùng **thể mệnh lệnh**: `note(react): hiểu cách cleanup của useEffect` ✅ (không phải "đã hiểu" hay "đang hiểu")
+- Giữ **dưới 72 ký tự**
+- `<topic>` nên khớp với **tên folder** (ví dụ: `react`, `docker`, `networking`)
+- **KHÔNG ghi ngày** vào subject — Git tự đánh dấu thời gian
 
-### Examples
+### Ví dụ
 
 ```
-note(javascript): understand closure and lexical scope
+note(javascript): hiểu closure và lexical scope
 
-- A closure retains access to its outer scope even after the outer function returns
-- Variables are captured by reference, not by value
-- Common pattern: factory functions, data encapsulation, memoization
+- Closure vẫn truy cập được scope bên ngoài dù hàm ngoài đã return
+- Biến được capture by reference, không phải by value
+- Pattern phổ biến: factory function, đóng gói dữ liệu, memoization
 - Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 ```
 
 ```
-note(networking): how DNS resolution works
+note(networking): DNS phân giải tên miền như thế nào
 
-- DNS translates human-readable domain names to IP addresses
-- Resolution order: browser cache → OS cache → Resolver → Root → TLD → Authoritative
-- TTL controls how long a record is cached
+- DNS dịch tên miền thành địa chỉ IP
+- Thứ tự phân giải: browser cache → OS cache → Resolver → Root → TLD → Authoritative
+- TTL kiểm soát thời gian cache bản ghi
 - Ref: https://howdns.works
 ```
 
 ```
-update(react): add more examples to useCallback note
+update(react): thêm ví dụ cho ghi chú useCallback
 
-- Added comparison between useMemo and useCallback
-- Clarified when NOT to use useCallback (premature optimization)
+- Thêm so sánh giữa useMemo và useCallback
+- Làm rõ khi nào KHÔNG nên dùng useCallback (tối ưu hóa sớm)
 ```
 
 ```
-struct: reorganize docker folder into subfiles
+struct: tổ chức lại folder docker thành các file con
 
-- Split docker.md into: basics.md, networking.md, compose.md
-- Updated topics/docker/README.md index
+- Tách docker.md thành: basics.md, networking.md, compose.md
+- Cập nhật index topics/docker/README.md
 ```
 
 ---
 
-## 7. Quick Checklist before committing
+## 7. Checklist trước khi commit
 
-- [ ] Content is written in **English**
-- [ ] Hard terms have a `> 🇻🇳` translation if needed
-- [ ] File is named with **lowercase and hyphens**
-- [ ] File follows the **content structure template**
-- [ ] The folder's **`README.md` index is updated**
-- [ ] Commit message follows the **correct format**
+- [ ] Nội dung viết bằng **tiếng Việt**
+- [ ] File đặt tên bằng **chữ thường và dấu gạch ngang**
+- [ ] File theo đúng **cấu trúc template**
+- [ ] **README.md của folder** đã được cập nhật
+- [ ] Commit message theo đúng **định dạng quy định**

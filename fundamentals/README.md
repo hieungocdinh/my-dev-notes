@@ -1,25 +1,21 @@
 # 📐 Fundamentals
 
-Notes about **language-agnostic Computer Science concepts** — knowledge that applies
-regardless of the technology stack you use.
+Ghi chú về **kiến thức Khoa học Máy tính không phụ thuộc ngôn ngữ** — kiến thức áp dụng được
+dù bạn đang dùng công nghệ nào.
 
 ---
 
-## Categories
+## Danh mục
 
-| Folder | Description |
-|--------|-------------|
-| [algorithms/](./algorithms/README.md) | Sorting, searching, graph traversal, dynamic programming... |
-| [data-structures/](./data-structures/README.md) | Arrays, linked lists, trees, hash tables, graphs... |
-| [networking/](./networking/README.md) | HTTP, DNS, TCP/IP, REST, WebSocket... |
-| [system-design/](./system-design/README.md) | Caching, load balancing, scalability, databases... |
+| Folder | Mô tả |
+|--------|-------|
+| [data-structures/](./data-structures/README.md) | Mảng, danh sách liên kết, cây, bảng băm, đồ thị... |
+<!-- new-note: insert category row above -->
 
-> Add a new row when you create a new category folder.
+> Thêm một hàng khi bạn tạo folder danh mục mới.
 
 ---
 
-> **How to add a new note:**
-> 1. Find (or create) the right category subfolder under `fundamentals/`
-> 2. Create `fundamentals/<category>/<concept-name>.md`
-> 3. Update the `README.md` inside that category folder
-> 4. Commit with: `note(fundamentals/<category>): <what you learned>`
+> **Cách thêm ghi chú mới:**
+> 1. Chạy: `python scripts/new-note.py fundamentals/<danh-mục> <tên-note>`
+> 2. Tất cả file README sẽ được cập nhật tự động.

@@ -1,75 +1,93 @@
-# 📓 My Dev Notes
+# 📓 Note technicals của hieungocdinh
 
-> A personal knowledge base where I document what I learn every day as a developer.
-> Written entirely in **English** to practice technical writing.
-
----
-
-## 🎯 Purpose
-
-This repository serves as my **"second brain"** for software development.
-Instead of forgetting what I read, I write it down — in my own words, with my own examples.
-
-- **Consistency over perfection** — A short note every day beats a perfect note once a month.
-- **Git commits as a daily log** — Each commit tells the story of what I learned that day.
-- **Organized by topic** — Easy to find, easy to revisit.
+> Kho kiến thức cá nhân — nơi tôi ghi lại những gì học được mỗi ngày với tư cách là một developer.
 
 ---
 
-## 📁 Structure
+## 🎯 Mục đích
+
+Repository này là **"bộ não thứ hai"** của tôi về lập trình.
+Thay vì quên những gì đã đọc, tôi viết lại — bằng lời của mình, với ví dụ của mình.
+
+- **Kiên trì hơn hoàn hảo** — Một ghi chú ngắn mỗi ngày tốt hơn một ghi chú dài mỗi tháng.
+- **Git commit như nhật ký học tập** — Mỗi commit ghi lại câu chuyện của ngày hôm đó.
+- **Tổ chức theo chủ đề** — Dễ tìm, dễ ôn lại.
+
+---
+
+## 📁 Cấu trúc
 
 ```
 my-dev-notes/
-├── README.md              # You are here — main index & navigation
-├── CONTRIBUTING.md        # Rules: how to write, name files, format commits
-├── .gitmessage            # Git commit message template
+├── README.md              # Bạn đang ở đây — trang chủ & điều hướng
+├── CONTRIBUTING.md        # Quy tắc: cách viết, đặt tên file, format commit
+├── .gitmessage            # Template cho commit message
 │
-├── topics/                # Tech-specific knowledge (React, Docker, SQL...)
-│   └── README.md          # Index of all topics
+├── scripts/               # Script hỗ trợ (new-note.py...)
 │
-└── fundamentals/          # Language-agnostic CS knowledge
-    └── README.md          # Index of all fundamentals
+├── topics/                # Kiến thức về công nghệ cụ thể (React, Docker, SQL...)
+│   └── README.md          # Danh sách tất cả topics
+│
+└── fundamentals/          # Kiến thức CS không phụ thuộc vào công nghệ nào
+    └── README.md          # Danh sách tất cả fundamentals
 ```
 
 ---
 
-## 🗺️ Navigation
+## 🗺️ Điều hướng
 
 ### 🔧 Topics
-Technology-specific notes. Each folder = one technology or tool.
+Ghi chú về công nghệ cụ thể. Mỗi folder = một công nghệ hoặc công cụ.
 
-| Topic | Description |
-|-------|-------------|
-| *(More topics will be added as I learn)* | |
+| Chủ đề | Mô tả |
+|--------|-------|
+<!-- new-note: insert topics row above -->
 
-→ [Browse all topics](./topics/README.md)
+→ [Xem tất cả topics](./topics/README.md)
 
 ---
 
 ### 📐 Fundamentals
-Core Computer Science concepts that are not tied to any specific technology.
+Kiến thức Khoa học Máy tính cốt lõi, không phụ thuộc vào bất kỳ công nghệ nào.
 
-| Topic | Description |
-|-------|-------------|
-| *(More topics will be added as I learn)* | |
+| Chủ đề | Mô tả |
+|--------|-------|
+| [Cấu trúc dữ liệu](./fundamentals/data-structures/README.md) | Mảng, danh sách liên kết, cây, bảng băm, đồ thị... |
+<!-- new-note: insert fundamentals row above -->
 
-→ [Browse all fundamentals](./fundamentals/README.md)
+→ [Xem tất cả fundamentals](./fundamentals/README.md)
 
 ---
 
-## 📋 Rules & Conventions
+## 📋 Quy tắc & Quy ước
 
-Before contributing (or reminding myself how things work), read:
+Trước khi thêm ghi chú (hoặc để nhắc lại cách mọi thứ hoạt động):
 
 → [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ---
 
-## 📅 Learning Log
+## 🛠️ Scripts
 
-My daily learning activity is tracked through **Git commit history**.
-Each commit message follows a structured format to make it easy to scan.
+Để tạo ghi chú mới và tự động cập nhật tất cả README:
 
-→ [View commit history on GitHub](../../commits/main)
+```bash
+python scripts/new-note.py <đường-dẫn> <tên-file> [tiêu-đề]
+
+# Ví dụ:
+python scripts/new-note.py fundamentals/data-structures linked-list "Danh sách liên kết"
+python scripts/new-note.py topics/react use-effect "useEffect"
+```
+
+→ [scripts/README.md](./scripts/README.md) — tài liệu đầy đủ
+
+---
+
+## 📅 Nhật ký học tập
+
+Hoạt động học tập hằng ngày của tôi được theo dõi qua **lịch sử Git commit**.
+Mỗi commit message theo một định dạng chuẩn để dễ dàng đọc lại.
+
+→ [Xem lịch sử commit trên GitHub](../../commits/main)
 
 ---
